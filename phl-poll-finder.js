@@ -17,6 +17,7 @@ function PHLPollFinder(opts) {
   this.apiHost = "http://gis.phila.gov/ArcGIS/rest/services/PhilaGov";
   this.locationPath = "/PollingPlaces/MapServer/1/query";
   this.settings = opts ? _.defaults(opts, this.defaultSettings) : this.defaultSettings;
+  this.responseBody = "";
 }
 
 PHLPollFinder.prototype.findLocation = function(address, callback) {
@@ -37,7 +38,6 @@ PHLPollFinder.prototype.findLocation = function(address, callback) {
 PHLPollFinder.prototype.callAPI = function(url, callback) {
   var self = this;
   var result;
-  self.responseBody = "";
   
   request(url, function (error, response, body) {
     self.responseBody = body;

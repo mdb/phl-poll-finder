@@ -1,7 +1,9 @@
 var nock = require('nock');
 var expect = require('expect.js');
+var sinon = require('sinon');
+var PHLGeocode = require('phl-geocode');
 var pollFinderPath = '../phl-poll-finder';
-var fakeRespBody = './fixtures/response-body.js';
+var fakeRespBody = require('./fixtures/response-body.js');
 
 describe("PHLPollFinder", function() {
   var phlPollFinder;
@@ -67,8 +69,47 @@ describe("PHLPollFinder", function() {
       expect(typeof phlPollFinder.findLocation).to.eql("function");
     });
 
-    it("", function (done) {
-      done();
+    // TODO
+    xit("calls PHLGeocode.getCoordinates", function (done) {
+      var spy = sinon.spy(PHLGeocode);
+      phlPollFinder = require(pollFinderPath)();
+ 
+      nock("http://someURL.com")
+        .get("some/path")
+        .reply(200, fakeRespBody);
+
+      phlPollFinder.findLocation('some address', function (r) {
+        expect(spy.calledOnce).to.eql(true);
+        done();
+      });
+    });
+  });
+
+  describe("#callAPI", function () {
+    it("makes an API call to the URL it is passed", function (done) {
+      nock("http://someURL.com")
+        .defaultReplyHeaders({'Content-Type': 'application/json'})
+        .get("/some/path")
+        .reply(200, fakeRespBody);
+
+      phlPollFinder = require(pollFinderPath)();
+      phlPollFinder.callAPI("http://someURL.com/some/path", function (r) {
+        expect(r).to.eql(fakeRespBody.features);
+        done();
+      });
+    });
+
+    it("it sets responseBody to the value of the API response", function (done) {
+      nock("http://someURL.com")
+        .defaultReplyHeaders({'Content-Type': 'application/json'})
+        .get("/some/path")
+        .reply(200, fakeRespBody);
+
+      phlPollFinder = require(pollFinderPath)();
+      phlPollFinder.callAPI("http://someURL.com/some/path", function (r) {
+        expect(JSON.parse(phlPollFinder.responseBody)).to.eql(fakeRespBody);
+        done();
+      });
     });
   });
 });

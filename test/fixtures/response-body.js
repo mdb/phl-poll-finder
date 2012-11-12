@@ -38,4 +38,4 @@ module.exports = {
        ADDRESS: '1600 ARCH STREET',
        PARKING_AC: 'L',
        BUILDING_A: 'M' } } ]
-}
+};
