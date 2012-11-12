@@ -1,0 +1,41 @@
+module.exports = { 
+  displayFieldName: 'ID',
+  fieldAliases: 
+   { WARD_1: 'WARD_1',
+     DIVISION_1: 'DIVISION_1',
+     POLLING_PL: 'POLLING_PL',
+     ADDRESS: 'ADDRESS',
+     PARKING_AC: 'PARKING_AC',
+     BUILDING_A: 'BUILDING_A' },
+  fields: 
+   [ { name: 'WARD_1',
+       type: 'esriFieldTypeDouble',
+       alias: 'WARD_1' },
+     { name: 'DIVISION_1',
+       type: 'esriFieldTypeDouble',
+       alias: 'DIVISION_1' },
+     { name: 'POLLING_PL',
+       type: 'esriFieldTypeString',
+       alias: 'POLLING_PL',
+       length: 50 },
+     { name: 'ADDRESS',
+       type: 'esriFieldTypeString',
+       alias: 'ADDRESS',
+       length: 50 },
+     { name: 'PARKING_AC',
+       type: 'esriFieldTypeString',
+       alias: 'PARKING_AC',
+       length: 254 },
+     { name: 'BUILDING_A',
+       type: 'esriFieldTypeString',
+       alias: 'BUILDING_A',
+       length: 254 } ],
+  features:
+    [ { attributes: 
+     { WARD_1: 8,
+       DIVISION_1: 15,
+       POLLING_PL: 'THE PHOENIX APTS',
+       ADDRESS: '1600 ARCH STREET',
+       PARKING_AC: 'L',
+       BUILDING_A: 'M' } } ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "phl-geocode",
+  "description": "Find the polling location for a Philadelphia voter.",
+  "version": "0.0.1",
+  "homepage": "http://github.com/mdb/phl-poll-finder",
+  "author": "Mike Ball",
+  "private": "true",
+  "engines": {
+    "node": "0.8.10",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "request": "*",
+    "underscore": "*",
+    "phl-geocode": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "nock": "*",
+    "expect.js": "*",
+    "sinon": "*",
+    "grunt": ">=0.3.16",
+    "grunt-simple-mocha": ">=0.2.0"
+  },
+  "scripts": {
+    "test": "grunt --verbose"
+  }
+}
