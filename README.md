@@ -22,7 +22,7 @@ Require and instantiate phl-poll-finder:
 
 Get latitude and longitude coordinates for a Philadelpia address:
 
-    phlPollFinder.findPoll('1500 market street', function (d) {
+    phlPollFinder.find('1500 market street', function (d) {
       console.log(d);
 
       /* Example response:
