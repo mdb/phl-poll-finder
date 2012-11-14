@@ -1,5 +1,5 @@
 {
-  "name": "phl-geocode",
+  "name": "phl-poll-finder",
   "description": "Find the polling location for a Philadelphia voter.",
   "version": "0.0.1",
   "homepage": "http://github.com/mdb/phl-poll-finder",
