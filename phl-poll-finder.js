@@ -20,7 +20,7 @@ function PHLPollFinder(opts) {
   this.responseBody = "";
 }
 
-PHLPollFinder.prototype.findLocation = function(address, callback) {
+PHLPollFinder.prototype.find = function(address, callback) {
   var apiBase = this.apiHost + this.locationPath;
   var url = buildURLBase(apiBase, this.settings);
   var lat; 

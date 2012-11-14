@@ -63,10 +63,10 @@ describe("PHLPollFinder", function() {
     });
   });
 
-  describe("#findLocation", function () {
+  describe("#find", function () {
     it("exists as a public method on a PHLPollFinder instance", function () {
       phlPollFinder = require(pollFinderPath)();
-      expect(typeof phlPollFinder.findLocation).to.eql("function");
+      expect(typeof phlPollFinder.find).to.eql("function");
     });
 
     // TODO
@@ -78,7 +78,7 @@ describe("PHLPollFinder", function() {
         .get("some/path")
         .reply(200, fakeRespBody);
 
-      phlPollFinder.findLocation('some address', function (r) {
+      phlPollFinder.find('some address', function (r) {
         expect(spy.calledOnce).to.eql(true);
         done();
       });
