@@ -6,21 +6,23 @@
   "author": "Mike Ball",
   "main": "./phl-poll-finder",
   "engines": {
-    "node": "0.8.14",
-    "npm": "1.1.x"
+    "node": "0.10.8",
+    "npm": "1.2.23"
   },
   "dependencies": {
     "request": "*",
-    "underscore": "*",
+    "underscore": "1.4.4",
     "phl-geocode": "*"
   },
   "devDependencies": {
     "mocha": "*",
     "nock": "*",
     "expect.js": "*",
-    "sinon": "*",
-    "grunt": ">=0.3.16",
-    "grunt-simple-mocha": ">=0.2.0"
+    "sinon": "1.7.2",
+    "grunt": "0.4",
+    "grunt-simple-mocha": "0.4.0",
+    "grunt-contrib-jshint": "0.5.3",
+    "grunt-cli": "0.1.8"
   },
   "scripts": {
     "test": "grunt --verbose"
