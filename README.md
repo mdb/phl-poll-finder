@@ -2,6 +2,8 @@
 
 # phl-poll-finder
 
+*NOTE:* The Philadelphia PollingPlaces API is no longer active, hence rendering this module somewhat useless, at least for the time being. I'll research other options.
+
 A Node.js module for finding the polling center for a Philadelphia address.
 
 phl-poll-finder is based on [Mark Headd](http://twitter.com/mheadd)'s [phlfindpolls gist](https://gist.github.com/4015200).
