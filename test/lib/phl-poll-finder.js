@@ -2,8 +2,8 @@ var nock = require('nock');
 var expect = require('expect.js');
 var sinon = require('sinon');
 var PHLGeocode = require('phl-geocode');
-var pollFinderPath = '../phl-poll-finder';
-var fakeRespBody = require('./fixtures/response-body.js');
+var pollFinderPath = '../../lib/phl-poll-finder';
+var fakeRespBody = require('../fixtures/response-body.js');
 
 describe("PHLPollFinder", function() {
   var phlPollFinder;

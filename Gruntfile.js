@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: '<json:package.json>',
     simplemocha: {
       all: {
-        src: 'test/*.js'
+        src: 'test/**/*.js'
       }
     },
     jshint: {
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       },
       lib: {
-        src: ['*.js']
+        src: ['lib/**/*.js']
       },
       test: {
         src: ['test/**/*.js']

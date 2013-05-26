@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "homepage": "http://github.com/mdb/phl-poll-finder",
   "author": "Mike Ball",
-  "main": "./phl-poll-finder",
+  "main": "lib/phl-poll-finder",
   "engines": {
     "node": "0.10.8",
     "npm": "1.2.23"
